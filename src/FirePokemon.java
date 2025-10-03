@@ -1,9 +1,11 @@
+import java.util.List;
+
 public class FirePokemon extends Pokemon {
     private int attack;
     private int special;
 
-    public FirePokemon(String name, int level, int attack, int special) {
-        super(name, level);
+    public FirePokemon(String name, int level, List<Type> types, int attack, int special) {
+        super(name, level, types);
         this.attack = attack;
         this.special = special;
     }
@@ -11,6 +13,11 @@ public class FirePokemon extends Pokemon {
     @Override
     public void eats() {
         System.out.println(getName() + " eats spicy berries.");
+    }
+
+    @Override
+    public void specialMove() {
+        System.out.println(name + " uses FlamethrowerDeLuxe!");
     }
 
     public void flameThrower() {
@@ -21,8 +28,4 @@ public class FirePokemon extends Pokemon {
         System.out.println(getName() + " uses Inferno!");
     }
 
-    public int getAttack() { return attack; }
-    public int getSpecial() { return special; }
-    public void setAttack(int attack) { this.attack = attack; }
-    public void setSpecial(int special) { this.special = special; }
 }
