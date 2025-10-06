@@ -79,6 +79,5 @@ public class Main {
         pikachu.electroBall();
         pikachu.specialMove();
 
-
     }
 }
